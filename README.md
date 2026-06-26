@@ -1,25 +1,27 @@
 # Data Analysis Foundations
 
-A structured collection of Python notebooks covering the core skills used in data analysis: numerical computing with NumPy, data wrangling with Pandas, and data visualization with Matplotlib, Seaborn, and Plotly. This repository is actively growing and will also include statistics notes, mini-projects, and assignments as they are completed.
+A structured collection of Python notebooks covering the core skills used in data analysis and data science: numerical computing with NumPy, data wrangling with Pandas, data visualization, and statistics and probability. The repository also includes applied case studies and will continue to grow with mini-projects and assignments.
 
 ## Repository Structure
 
 ```
 .
-├── numpy.ipynb           NumPy fundamentals - arrays and numerical operations
-├── pandas.ipynb          Pandas fundamentals - DataFrames, cleaning, filtering
-└── visualization.ipynb   Data visualization - Matplotlib, Seaborn, Plotly
+├── numpy.ipynb                        NumPy fundamentals - arrays and numerical operations
+├── pandas.ipynb                       Pandas fundamentals - DataFrames, cleaning, filtering
+├── visualization.ipynb                Data visualization - Matplotlib, Seaborn, Plotly
+└── Statistics_and_probability.ipynb   Statistics, probability, and an applied Airbnb case study
 ```
 
 The notebooks build on each other in sequence:
 
 ```
-numpy.ipynb -> pandas.ipynb -> visualization.ipynb
+numpy.ipynb -> pandas.ipynb -> visualization.ipynb -> Statistics_and_probability.ipynb
 ```
 
 - `numpy.ipynb` covers the array operations that underlie everything else in the Python data stack.
 - `pandas.ipynb` applies those foundations to real, tabular data: loading, cleaning, and filtering.
 - `visualization.ipynb` visualizes the cleaned data produced in the Pandas stage.
+- `Statistics_and_probability.ipynb` builds the statistical reasoning behind the analysis, then applies it directly to a real dataset in the Airbnb case study.
 
 ## Contents
 
@@ -42,15 +44,50 @@ numpy.ipynb -> pandas.ipynb -> visualization.ipynb
 - Subplots and correlation heatmaps
 - Interactive 3D visualization with Plotly
 
+### Statistics_and_probability.ipynb
+
+**Descriptive statistics**
+- Measures of central tendency: mean, median, mode (including multimode)
+- Population vs. sample, and sampling methods: random, systematic, stratified
+- Measures of dispersion: range, variance, standard deviation, percentile, quartiles
+- Outlier detection (box plots) and removal using the IQR method
+- Correlation: positive, negative, and zero correlation
+- Data types: qualitative (nominal, ordinal) and quantitative (discrete, continuous)
+- Normal distribution and skewness
+
+**Probability**
+- Core concepts: experiment, event, outcome
+- Simple and compound events
+- Classical probability problems: coins, dice, and card draws
+- Marginal, joint, and conditional probability
+- Hands-on practice using a country-level dataset
+
+**Airbnb case study**
+
+An applied exploratory data analysis project on a New York City Airbnb listings dataset (48,895 listings, 16 columns), combining the statistics and visualization skills above into a single end-to-end analysis:
+- Data cleaning: renaming columns, dropping irrelevant fields, filling missing values
+- Outlier detection and removal across numeric columns
+- Distribution analysis of listing prices (histogram, skewness)
+- Identifying the busiest neighbourhood groups
+- Room type distribution (count plot)
+- Correlation matrix and heatmap across listing attributes
+- Identifying neighbourhoods with the highest review counts (bar plot)
+
 ## Datasets
 
-`pandas.ipynb` and `visualization.ipynb` read from `mtcars2.csv` and `cars (1).csv`. These files need to be present in the same directory as the notebooks for the data-loading cells to run.
+The following CSV files are read directly by the notebooks and need to be present in the same directory for the data-loading cells to run:
+
+| File | Used in |
+|---|---|
+| `mtcars2.csv` | `pandas.ipynb` |
+| `cars (1).csv` | `pandas.ipynb`, `visualization.ipynb` |
+| `Country (2) (1).csv` | `Statistics_and_probability.ipynb` |
+| `Airbnb_datanew.csv` | `Statistics_and_probability.ipynb` |
 
 ## What's Next
 
 This repository is a work in progress. Planned additions include:
-- Statistics notes and exercises
-- Mini-projects applying NumPy, Pandas, and visualization together
+- Mini-projects applying statistics, probability, and visualization together
 - Assignment solutions and practice problems
 
 ## License
